@@ -4,7 +4,6 @@ const swiper = new Swiper('.swiper-slider', {
 
 
     breakpoints: {
-        // Когда ширина окна >= 640px
         100: {
             slidesPerView: 1,
             spaceBetween: 20
@@ -14,7 +13,6 @@ const swiper = new Swiper('.swiper-slider', {
             slidesPerView: 2,
             spaceBetween: 20
         },
-        // Когда ширина окна >= 768px
         768: {
             slidesPerView: 2,
             spaceBetween: 20
