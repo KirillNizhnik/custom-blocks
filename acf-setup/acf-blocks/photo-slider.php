@@ -57,10 +57,7 @@ var_dump($images);
         display: none;
     }
 
-    .photo-slide{
-        width: 100%;
-        height: 100%;
-    }
+
 
     .swiper{
         width: 100%;
@@ -90,6 +87,42 @@ var_dump($images);
     }
     .photo-slide:hover .photo-slide-link {
         display: block;
+    }
+
+    .swiper-slide.photo-slide {
+        height: 350px;
+    }
+
+    @media (max-width: 1200px) {
+        .swiper-slide.photo-slide {
+            height: 250px;
+        }
+    }
+
+
+
+    @media (max-width: 700px) {
+        .swiper-slide.photo-slide {
+            height: 250px;
+
+
+            breakpoints: {
+        // Когда ширина окна >= 640px
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // Когда ширина окна >= 768px
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // Когда ширина окна >= 1024px
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40
+        }
+        } }
     }
 
 
