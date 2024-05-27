@@ -1,6 +1,5 @@
 <?php
 $images = get_field('slider');
-var_dump($images);
 ?>
 <section class="custom-slider">
 
@@ -33,7 +32,7 @@ var_dump($images);
     }
 
     .custom-slider{
-        margin: 20px 0 20px 0;
+        margin: 30px 0 30px 0;
         width: 100% !important;
         max-width: 100% !important;
 
@@ -104,25 +103,6 @@ var_dump($images);
     @media (max-width: 700px) {
         .swiper-slide.photo-slide {
             height: 250px;
-
-
-            breakpoints: {
-        // Когда ширина окна >= 640px
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // Когда ширина окна >= 768px
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        // Когда ширина окна >= 1024px
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 40
-        }
-        } }
     }
 
 
