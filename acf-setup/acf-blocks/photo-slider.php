@@ -7,13 +7,12 @@ $images = get_field('slider');
     <div class="swiper-wrapper swiper-cst-wrapper">
         <?php foreach ($images as $image):?>
         <div class="swiper-slide photo-slide">
-            <img src="<?php echo $image['images']?>" alt="slide" class="photo-slide-img">
             <?php if ($image['link']): ?>
-                <div class="photo-slide-overlay">
-                    <a href="<?= $image['link']['url'] ?>" class="photo-slide-link">
-                        <?= $image['link']['title'] ?>
-                    </a>
-                </div>
+                <a href="<?= $image['link']['url'] ?>" class="link">
+            <?php endif; ?>
+                    <img src="<?php echo $image['images']?>" alt="slide" class="photo-slide-img">
+            <?php if ($image['link']): ?>
+                </a>
             <?php endif; ?>
         </div>
         <?php endforeach;?>
@@ -26,6 +25,20 @@ $images = get_field('slider');
 </section >
 
 <style>
+
+    .custom-slider .swiper-slide {
+        overflow: hidden; /* Ensure the image doesn't overflow outside the slide */
+    }
+
+    .custom-slider .photo-slide-img {
+        transition: transform 0.3s ease-in-out; /* Smooth transition for the hover effect */
+    }
+
+    .custom-slider .swiper-slide:hover .photo-slide-img {
+        transform: scale(1.1); /* Scale the image to 110% on hover */
+        cursor: pointer;
+    }
+
 
     .swiper-slide {
         display: flex;
