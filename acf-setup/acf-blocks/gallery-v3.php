@@ -21,11 +21,11 @@ $title = get_field("title");
                     <a href="<?= $link['link']['url'] ?>" class="resort-subtext"><?= $link['link']['title'] ?></a>
                 <?php } ?>
             </div>
-            <?php $water_img = get_field("water_images");
-            if($water_img) :
+            <?php
+            if($item['water_images']) :
             ?>
             <div class="water-img">
-                <img src="<?= $water_img ?>" alt="" class="water_img">
+                <img src="<?=  $item['water_images'] ?>" alt="" class="water_img">
             </div>
             <?php endif; ?>
         </div>
