@@ -55,6 +55,26 @@ add_action('acf/init', function () {
         'enqueue_assets' => 'enqueue_gallery_block_assets1',
 
     ]);
+    acf_register_block_type([
+        'name' => 'galleryv2-block',
+        'title' => 'Gallery v2 block',
+        'description' => '',
+        'render_template' => plugin_dir_path(__FILE__) . '/acf-blocks/gallery-v2.php',
+        'category' => 'customs-blocks',
+        'icon' => 'format-gallery',
+        'mode' => 'edit',
+
+    ]);
+    acf_register_block_type([
+        'name' => 'galleryv3-block',
+        'title' => 'Gallery v3 block',
+        'description' => '',
+        'render_template' => plugin_dir_path(__FILE__) . '/acf-blocks/gallery-v3.php',
+        'category' => 'customs-blocks',
+        'icon' => 'format-gallery',
+        'mode' => 'edit',
+
+    ]);
     function enqueue_gallery_block_assets(): void
     {
         wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
